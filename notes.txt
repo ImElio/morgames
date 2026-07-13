@@ -13,14 +13,14 @@ surface: #1E293B
 text: #E2E8F0
 
 USE OF COLORS:
-Primary: azioni principali, pulsanti, elementi selezionati
-Secondary: elementi interattivi, link, hover
-Accent: conferme, successi, elementi positivi
-Warning: notifiche, avvisi, attenzione
-Error: errori, cancellazioni, azioni pericolose
-Background: sfondo principale dell'app
-Surface: pannelli, modali, menu, card
-Text: testi principali e secondari
+Primary: main actions, buttons, selected elements
+Secondary: interactive elements, links, hover states
+Accent: confirmations, successes, positive elements
+Warning: notifications, warnings, attention states
+Error: errors, deletions, dangerous actions
+Background: main application background
+Surface: panels, modals, menus, cards
+Text: primary and secondary text
 
 TEXT FOND:
 Inter & Poppins
