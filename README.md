@@ -1,4 +1,3 @@
-```md
 <br clear="both">
 
 <div align="center">
@@ -125,4 +124,3 @@ Un luogo dove un giocatore può diventare sviluppatore, dove un'idea può trasfo
 <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&style=plastic" />
 
 </div>
-```
