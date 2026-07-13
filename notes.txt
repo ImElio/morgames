@@ -22,5 +22,5 @@ Background: main application background
 Surface: panels, modals, menus, cards
 Text: primary and secondary text
 
-TEXT FOND:
+TEXT FONT:
 Inter & Poppins
