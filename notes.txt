@@ -25,4 +25,4 @@ Text: primary and secondary text
 TEXT FONT:
 Inter & Poppins
 
-Feel free to improve this file whenever you want
+Feel free to improve this file whenever you want.
