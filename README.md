@@ -117,7 +117,7 @@ See:
 
 - [README.md](README.md) - Project overview
 - [LICENSE.md](LICENSE.md) - License information
-- [CONTRIBUTING.md](.github/CONTRIBUTING.md) - Contribution guidelines
-- [CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md) - Community rules
-- [SECURITY.md](.github/SECURITY.md) - Security policy
-- [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) - Pull request format
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Community rules
+- [SECURITY.md](SECURITY.md) - Security policy
+- [PULL_REQUEST_TEMPLATE.md](PULL_REQUEST_TEMPLATE.md) - Pull request format
