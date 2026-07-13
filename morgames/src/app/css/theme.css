@@ -1,0 +1,11 @@
+@theme inline {
+  --color-background: #0F172A;
+  --color-foreground: #E2E8F0;
+
+  --color-primary: #7C3AED;
+  --color-secondary: #3B82F6;
+  --color-accent: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-surface: #1E293B;
+}

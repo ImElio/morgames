@@ -1,0 +1,26 @@
+BRAND:
+name: MORGAMES
+icon: "../logo_icon.png"
+
+COLORS:
+primary: #7C3AED
+secondary: #3B82F6
+accent: #10B981
+warning: #F59E0B
+error: #EF4444
+background: #0F172A
+surface: #1E293B
+text: #E2E8F0
+
+USE OF COLORS:
+Primary: azioni principali, pulsanti, elementi selezionati
+Secondary: elementi interattivi, link, hover
+Accent: conferme, successi, elementi positivi
+Warning: notifiche, avvisi, attenzione
+Error: errori, cancellazioni, azioni pericolose
+Background: sfondo principale dell'app
+Surface: pannelli, modali, menu, card
+Text: testi principali e secondari
+
+TEXT FOND:
+Inter & Poppins
