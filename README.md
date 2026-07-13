@@ -96,10 +96,10 @@ Contributions are welcome.
 
 Before contributing, please read:
 
-- [Contributing Guide](.github/CONTRIBUTING.md)
-- [Code of Conduct](.github/CODE_OF_CONDUCT.md)
-- [Security Policy](.github/SECURITY.md)
-- [Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md)
+- [Contributing Guide](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Pull Request Template](PULL_REQUEST_TEMPLATE.md)
 
 
 ## License
