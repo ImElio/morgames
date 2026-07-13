@@ -5,69 +5,49 @@ import GameCard from "@/components/dashboard/GameCard";
 import PlayerStats from "@/components/dashboard/PlayerStats";
 import ActivityPanel from "@/components/dashboard/ActivityPanel";
 
+const stats = [
+  { id: 1, title: "Games", value: "24" },
+  { id: 2, title: "Players", value: "8.4K" },
+  { id: 3, title: "Playtime", value: "426h" },
+  { id: 4, title: "Rank", value: "#128" },
+];
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-background">
-
+    <div className="flex min-h-screen bg-background text-foreground">
       <Sidebar />
 
-      <div className="flex-1">
-
+      <main className="flex-1">
         <Header />
 
-
-        <section className="p-8">
-
-          <h1 className="text-3xl font-bold text-foreground">
-            Dashboard
-          </h1>
-
-          <p className="mt-2 text-foreground/60">
-            Manage your gaming profile and statistics.
-          </p>
-
-
-          <div className="mt-8 grid gap-6 md:grid-cols-4">
-
-            <StatCard
-              title="Games"
-              value="24"
-            />
-
-            <StatCard
-              title="Players"
-              value="8.4K"
-            />
-
-            <StatCard
-              title="Playtime"
-              value="426h"
-            />
-
-            <StatCard
-              title="Rank"
-              value="#128"
-            />
-
+        <div className="p-6 lg:p-8">
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold">Dashboard</h1>
+            <p className="mt-2 text-foreground/60">
+              Manage your gaming profile and statistics.
+            </p>
           </div>
 
-
-          <div className="mt-8 grid gap-6 lg:grid-cols-3">
-
-            <GameCard />
-
-            <PlayerStats />
-
-            <ActivityPanel />
-
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+            {stats.map((stat) => (
+              <StatCard key={stat.id} title={stat.title} value={stat.value} />
+            ))}
           </div>
 
-
-        </section>
-
-      </div>
-
-    </main>
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="md:col-span-2 lg:col-span-1">
+              <GameCard />
+            </div>
+            <div>
+              <PlayerStats />
+            </div>
+            <div className="md:col-span-2 lg:col-span-1">
+              <ActivityPanel />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

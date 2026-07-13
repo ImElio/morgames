@@ -1,36 +1,89 @@
 import Image from "next/image";
+import {
+  Home,
+  Gamepad2,
+  Trophy,
+  Users,
+  BarChart3,
+  Settings,
+  type LucideIcon,
+} from "lucide-react";
+
+type MenuItem = { name: string; icon: LucideIcon; active?: boolean };
 
 const menu = [
   {
     name: "Dashboard",
-    icon: "⌂",
+    icon: Home,
     active: true,
   },
   {
     name: "Games",
-    icon: "🎮",
+    icon: Gamepad2,
   },
   {
     name: "Leaderboard",
-    icon: "🏆",
+    icon: Trophy,
   },
   {
     name: "Players",
-    icon: "👥",
+    icon: Users,
   },
   {
     name: "Analytics",
-    icon: "📈",
+    icon: BarChart3,
   },
 ];
 
 const settings = [
   {
     name: "Settings",
-    icon: "⚙",
+    icon: Settings,
   },
 ];
 
+/**
+ * Reusable component for a single sidebar item.
+ * Handles active state and hover styles.
+ */
+function SidebarItem({ item }: { item: MenuItem }) {
+  const { name, icon: Icon, active } = item;
+
+  return (
+    <button
+      key={name}
+      className={`
+        group flex w-full items-center gap-3 rounded-xl px-3
+        py-3 text-sm font-medium transition-all duration-200
+        ${
+          active
+            ? "bg-primary/15 text-primary shadow-sm"
+            : "text-foreground/60 hover:bg-white/5 hover:text-foreground"
+        }
+      `}
+    >
+      <span
+        className={`
+          flex h-9 w-9 items-center justify-center rounded-lg
+          text-lg transition
+          ${
+            active
+              ? "bg-primary/20"
+              : "bg-white/5 group-hover:bg-primary/10"
+          }
+        `}
+      >
+        <Icon size={20} />
+      </span>
+
+      <span>{name}</span>
+
+      {active && (
+        <span className="ml-auto h-2 w-2 rounded-full bg-primary" />
+      )}
+    </button>
+  );
+}
 
 export default function Sidebar() {
   return (
@@ -41,7 +94,7 @@ export default function Sidebar() {
         min-h-screen
         flex-col
         border-r
-        border-white/5
+        border-foreground/5
         bg-surface/40
         backdrop-blur-xl
         px-5
@@ -50,7 +103,6 @@ export default function Sidebar() {
     >
 
       {/* Logo */}
-
       <div className="flex items-center px-3">
         <Image
           src="/brand/logo_text.png"
@@ -61,9 +113,7 @@ export default function Sidebar() {
         />
       </div>
 
-
       {/* Main Menu */}
-
       <nav className="mt-10 flex flex-1 flex-col gap-2">
 
         <p className="
@@ -78,89 +128,9 @@ export default function Sidebar() {
           Menu
         </p>
 
+        {menu.map((item) => <SidebarItem key={item.name} item={item} />)}
 
-        {menu.map((item) => (
-
-          <button
-            key={item.name}
-            className={`
-              group
-              flex
-              items-center
-              gap-3
-              rounded-xl
-              px-3
-              py-3
-              text-sm
-              transition-all
-              duration-200
-
-              ${
-                item.active
-                ? `
-                  bg-primary/15
-                  text-primary
-                  shadow-sm
-                `
-                :
-                `
-                  text-foreground/60
-                  hover:bg-white/5
-                  hover:text-foreground
-                `
-              }
-            `}
-          >
-
-            <span
-              className={`
-                flex
-                h-9
-                w-9
-                items-center
-                justify-center
-                rounded-lg
-                text-lg
-                transition
-
-                ${
-                  item.active
-                  ? "bg-primary/20"
-                  : "bg-white/5 group-hover:bg-primary/10"
-                }
-              `}
-            >
-              {item.icon}
-            </span>
-
-
-            <span className="font-medium">
-              {item.name}
-            </span>
-
-
-            {
-              item.active && (
-                <span
-                  className="
-                    ml-auto
-                    h-2
-                    w-2
-                    rounded-full
-                    bg-primary
-                  "
-                />
-              )
-            }
-
-
-          </button>
-
-        ))}
-
-
-        {/* Settings */}
-
+        {/* System */}
         <div className="mt-auto">
 
           <p className="
@@ -175,66 +145,18 @@ export default function Sidebar() {
             System
           </p>
 
-
-          {settings.map((item)=>(
-
-            <button
-              key={item.name}
-              className="
-                group
-                flex
-                w-full
-                items-center
-                gap-3
-                rounded-xl
-                px-3
-                py-3
-                text-sm
-                text-foreground/60
-                transition
-                hover:bg-white/5
-                hover:text-foreground
-              "
-            >
-
-              <span
-                className="
-                  flex
-                  h-9
-                  w-9
-                  items-center
-                  justify-center
-                  rounded-lg
-                  bg-white/5
-                  text-lg
-                  group-hover:bg-primary/10
-                "
-              >
-                {item.icon}
-              </span>
-
-
-              {item.name}
-
-            </button>
-
-          ))}
-
+          {settings.map((item) => <SidebarItem key={item.name} item={item} />)}
 
         </div>
-
-
       </nav>
 
-
       {/* User Card */}
-
       <div
         className="
           mt-6
           rounded-2xl
           border
-          border-white/5
+          border-foreground/5
           bg-background/40
           p-4
         "

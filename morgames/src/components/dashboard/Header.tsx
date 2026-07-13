@@ -1,3 +1,5 @@
+import { Bell } from "lucide-react";
+
 export default function Header() {
   return (
     <header
@@ -23,14 +25,15 @@ export default function Header() {
 
         <button
           className="
+            flex h-10 w-10 items-center justify-center
             rounded-xl
             bg-surface
-            px-4
-            py-2
             text-sm
+            text-foreground/60
+            transition-colors hover:bg-foreground/5 hover:text-foreground
           "
         >
-          🔔
+          <Bell size={20} />
         </button>
 
 

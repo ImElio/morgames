@@ -38,6 +38,12 @@ Experience
 <p className="text-2xl font-bold text-secondary">
 82%
 </p>
+<div className="h-2 w-full rounded-full bg-background">
+<div
+className="h-2 rounded-full bg-secondary"
+style={{ width: "82%" }}
+/>
+</div>
 
 </div>
 
