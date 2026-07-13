@@ -1,4 +1,6 @@
-# [Morgames](https://discord.gg/v56UwJKKQ6)
+# Morgames
+
+Join our Discord community: [Discord Server](https://discord.gg/v56UwJKKQ6)
 
 Morgames is a gaming ecosystem where anyone can create, play, and share interactive experiences.
 
