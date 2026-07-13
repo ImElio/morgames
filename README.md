@@ -7,71 +7,65 @@
 </div>
 
 
-<br clear="both">
-
-
 <div align="center">
 
 ## Create. Play. Share.
 
-Morgames è un ecosistema gaming dove chiunque può creare, giocare e condividere esperienze interattive.
+Morgames is a gaming ecosystem where anyone can create, play, and share interactive experiences.
 
-Grazie al Game Builder a blocchi, trasformare un'idea in un videogioco diventa semplice, veloce e accessibile a tutti.
+With our visual Block Game Builder, turning ideas into playable games becomes simple, fast, and accessible.
 
-Nessun codice complesso.
-Solo creatività, logica e immaginazione.
+No complex code.
+Just creativity, logic, and imagination.
 
 </div>
 
 
-<br clear="both">
+## 🎮 About Morgames
 
+Morgames is a platform built for game creation and discovery.
 
-## 🎮 Cos'è Morgames
+It combines a visual editor, simplified development tools, and a community of players and creators into one ecosystem.
 
-Morgames è una piattaforma dedicata alla creazione e alla scoperta di videogiochi.
-
-Il progetto combina un editor visuale, strumenti di sviluppo semplificati e una community di giocatori e creator in un unico ambiente.
-
-L'obiettivo è abbattere le barriere dello sviluppo videoludico, permettendo a chiunque di trasformare un'idea in un'esperienza giocabile.
+Our goal is to make game development accessible to everyone.
 
 
 ## ✨ Features
 
-### 🧩 Game Builder
+### 🧩 Block Game Builder
 
-Crea videogiochi attraverso un sistema visuale a blocchi.
+Create games using a visual block-based system.
 
-- Logiche personalizzate
-- Eventi dinamici
-- Meccaniche di gioco
-- Prototipazione rapida
+- Custom logic
+- Dynamic events
+- Game mechanics
+- Fast prototyping
 
 
 ### 🌎 Community
 
-Condividi le tue creazioni e scopri nuovi giochi sviluppati dalla community.
+Share creations and discover games made by other creators.
 
-- Pubblicazione giochi
-- Profili creator
-- Feedback e valutazioni
+- Game publishing
+- Creator profiles
+- Feedback and ratings
 
 
 ### 📊 Dashboard
 
-Gestisci il tuo percorso da giocatore e creatore.
+Manage your creator and player experience.
 
-- Statistiche personali
-- Progressi
-- Classifiche
-- Analisi dei giochi
+- Statistics
+- Progress tracking
+- Leaderboards
+- Game analytics
 
 
 ## 🚀 Vision
 
-Morgames vuole diventare un punto di riferimento per la nuova generazione di creator gaming.
+Morgames aims to become a platform for the next generation of game creators.
 
-Un luogo dove un giocatore può diventare sviluppatore, dove un'idea può trasformarsi in un gioco e dove la creatività non viene limitata dalla conoscenza tecnica.
+A place where players become developers, ideas become games, and creativity is not limited by technical knowledge.
 
 
 ## 🛠️ Tech Stack
@@ -108,8 +102,29 @@ Un luogo dove un giocatore può diventare sviluppatore, dove un'idea può trasfo
 ⬜ Leaderboards  
 
 
-<br clear="both">
+## 🤝 Contributing
 
+Want to help build Morgames?
+
+Read our contribution guidelines:
+
+- [Contributing Guide](.github/CONTRIBUTING.md)
+- [Code of Conduct](.github/CODE_OF_CONDUCT.md)
+- [Security Policy](.github/SECURITY.md)
+
+
+## 📜 License
+
+Morgames uses a custom source-available license.
+
+You can view and contribute to the project, but the Morgames brand, assets, and intellectual property remain protected.
+
+See:
+
+- [License](LICENSE.md)
+
+
+<br clear="both">
 
 <div align="center">
 
