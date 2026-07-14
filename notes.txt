@@ -1,28 +1,39 @@
-BRAND:
-name: MORGAMES
-icon: "../logo_icon.png"
+# MORGAMES - Design System
 
-COLORS:
-primary: #7C3AED
-secondary: #3B82F6
-accent: #10B981
-warning: #F59E0B
-error: #EF4444
-background: #0F172A
-surface: #1E293B
-text: #E2E8F0
+## Brand
+- **Name**: MORGAMES
+- **Icon**: `../logo_icon.png`
 
-USE OF COLORS:
-Primary: main actions, buttons, selected elements
-Secondary: interactive elements, links, hover states
-Accent: confirmations, successes, positive elements
-Warning: notifications, warnings, attention states
-Error: errors, deletions, dangerous actions
-Background: main application background
-Surface: panels, modals, menus, cards
-Text: primary and secondary text
+---
 
-TEXT FONT:
-Inter & Poppins
+## Colors
 
-Feel free to improve this file whenever you want
+### Palette
+- **Primary**: `#7C3AED` - Azioni principali, pulsanti, elementi selezionati.
+- **Secondary**: `#3B82F6` - Elementi interattivi, link, stati hover.
+- **Accent**: `#10B981` - Conferme, successi, elementi positivi.
+- **Warning**: `#F59E0B` - Notifiche, avvisi, stati di attenzione.
+- **Error**: `#EF4444` - Errori, cancellazioni, azioni pericolose.
+
+### UI
+- **Background**: `#0F172A` - Sfondo principale dell'applicazione.
+- **Surface**: `#1E293B` - Pannelli, modali, menu, card.
+- **Text**: `#E2E8F0` - Testo primario e secondario.
+
+---
+
+## Typography
+
+### Fonts
+- **Headings**: Poppins
+- **Body**: Inter
+
+### Font Styles (Esempio)
+- **H1**: Poppins Bold, 36px
+- **H2**: Poppins SemiBold, 28px
+- **Body Text**: Inter Regular, 16px
+- **Caption**: Inter Regular, 12px
+
+---
+
+*Feel free to improve this file whenever you want.*
