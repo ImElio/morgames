@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import {
   Home,
+  LayoutGrid,
   Gamepad2,
   Trophy,
   Users,
@@ -13,13 +14,19 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-type MenuItem = { id: string; name: string; icon: LucideIcon };
+type MenuItem = { id: string; name: string; icon: LucideIcon; route?: string };
 
-const menu = [
+const menu: MenuItem[] = [
   {
     id: "dashboard",
     name: "Dashboard",
     icon: Home,
+  },
+  {
+    id: "projects",
+    name: "Projects",
+    icon: LayoutGrid,
+    route: "/dashboard/projects",
   },
   {
     id: "games",
@@ -51,16 +58,13 @@ const settings: MenuItem[] = [
   },
 ];
 
-/**
- * Reusable component for a single sidebar item.
- * Handles active state and hover styles.
- */
-function SidebarItem({ item, active }: { item: MenuItem; active: boolean }) {
-  const { id, name, icon: Icon } = item;
+function SidebarItem({ item, href, active }: { item: MenuItem; href: string; active: boolean }) {
+  const { name, icon: Icon } = item;
 
   return (
     <Link
-      href={`/?page=${id}`}
+      href={href}
+      aria-current={active ? "page" : undefined}
       className={`
         group flex w-full items-center gap-3 rounded-xl px-3
         py-3 text-sm font-medium transition-all duration-200
@@ -94,9 +98,19 @@ function SidebarItem({ item, active }: { item: MenuItem; active: boolean }) {
   );
 }
 
+function getHref(item: MenuItem) {
+  return item.route ?? `/?page=${item.id}`;
+}
+
 export default function Sidebar() {
+  const pathname = usePathname();
   const searchParams = useSearchParams();
-  const currentPage = searchParams.get("page") || "dashboard";
+  const currentQueryPage = searchParams.get("page") || "dashboard";
+
+  function isActive(item: MenuItem) {
+    if (item.route) return pathname.startsWith(item.route);
+    return pathname === "/" && currentQueryPage === item.id;
+  }
 
   return (
     <aside
@@ -114,7 +128,6 @@ export default function Sidebar() {
       "
     >
 
-      {/* Logo */}
       <div className="flex items-center px-3">
         <Image
           src="/brand/logo_text.png"
@@ -125,7 +138,6 @@ export default function Sidebar() {
         />
       </div>
 
-      {/* Main Menu */}
       <nav className="mt-10 flex flex-1 flex-col gap-2">
 
         <p className="
@@ -141,10 +153,9 @@ export default function Sidebar() {
         </p>
 
         {menu.map((item) => (
-          <SidebarItem key={item.id} item={item} active={currentPage === item.id} />
+          <SidebarItem key={item.id} item={item} href={getHref(item)} active={isActive(item)} />
         ))}
 
-        {/* System */}
         <div className="mt-auto">
 
           <p className="
@@ -160,13 +171,12 @@ export default function Sidebar() {
           </p>
 
           {settings.map((item) => (
-            <SidebarItem key={item.id} item={item} active={currentPage === item.id} />
+            <SidebarItem key={item.id} item={item} href={getHref(item)} active={isActive(item)} />
           ))}
 
         </div>
       </nav>
 
-      {/* User Card */}
       <div
         className="
           mt-6

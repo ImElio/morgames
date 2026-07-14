@@ -113,7 +113,7 @@ text-sm
 text-foreground/60
 "
 >
-Don't have an account?
+Don&apos;t have an account?
 {" "}
 <span className="text-primary cursor-pointer">
 Create one

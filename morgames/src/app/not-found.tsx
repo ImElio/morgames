@@ -10,7 +10,6 @@ export default function NotFound() {
         justify-center overflow-hidden bg-background p-8 text-center
       "
     >
-      {/* Sfondo decorativo */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <div className="h-[400px] w-[400px] rounded-full bg-primary/5 blur-3xl lg:h-[600px] lg:w-[600px]" />
@@ -18,7 +17,6 @@ export default function NotFound() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center">
-        {/* Effetto Glitch */}
         <div className="glitch-container relative mb-8 text-8xl font-black text-primary lg:text-9xl">
           <div className="glow">404</div>
           <div className="absolute -left-4 -top-4 -z-10 animate-pulse opacity-30">
@@ -50,8 +48,8 @@ export default function NotFound() {
             text-foreground/60
           "
         >
-          The page you are looking for doesn't exist, was moved, or never
-          spawned. Let's get you back to the lobby.
+          The page you are looking for doesn&apos;t exist, was moved, or never
+          spawned. Let&apos;s get you back to the lobby.
         </p>
 
         <Link

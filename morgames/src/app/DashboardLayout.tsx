@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import Sidebar from "@/components/dashboard/Sidebar";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "@/components/dashboard/Header";
@@ -14,7 +15,9 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="flex min-h-screen bg-background text-foreground">
-      <Sidebar />
+      <Suspense fallback={null}>
+        <Sidebar />
+      </Suspense>
 
       <main className="flex flex-1 flex-col overflow-x-hidden">
         <Header />
