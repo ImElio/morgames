@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   Home,
   Gamepad2,
@@ -9,34 +13,39 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-type MenuItem = { name: string; icon: LucideIcon; active?: boolean };
+type MenuItem = { id: string; name: string; icon: LucideIcon };
 
 const menu = [
   {
+    id: "dashboard",
     name: "Dashboard",
     icon: Home,
-    active: true,
   },
   {
+    id: "games",
     name: "Games",
     icon: Gamepad2,
   },
   {
+    id: "leaderboard",
     name: "Leaderboard",
     icon: Trophy,
   },
   {
+    id: "players",
     name: "Players",
     icon: Users,
   },
   {
+    id: "analytics",
     name: "Analytics",
     icon: BarChart3,
   },
 ];
 
-const settings = [
+const settings: MenuItem[] = [
   {
+    id: "settings",
     name: "Settings",
     icon: Settings,
   },
@@ -46,12 +55,12 @@ const settings = [
  * Reusable component for a single sidebar item.
  * Handles active state and hover styles.
  */
-function SidebarItem({ item }: { item: MenuItem }) {
-  const { name, icon: Icon, active } = item;
+function SidebarItem({ item, active }: { item: MenuItem; active: boolean }) {
+  const { id, name, icon: Icon } = item;
 
   return (
-    <button
-      key={name}
+    <Link
+      href={`/?page=${id}`}
       className={`
         group flex w-full items-center gap-3 rounded-xl px-3
         py-3 text-sm font-medium transition-all duration-200
@@ -81,11 +90,14 @@ function SidebarItem({ item }: { item: MenuItem }) {
       {active && (
         <span className="ml-auto h-2 w-2 rounded-full bg-primary" />
       )}
-    </button>
+    </Link>
   );
 }
 
 export default function Sidebar() {
+  const searchParams = useSearchParams();
+  const currentPage = searchParams.get("page") || "dashboard";
+
   return (
     <aside
       className="
@@ -128,7 +140,9 @@ export default function Sidebar() {
           Menu
         </p>
 
-        {menu.map((item) => <SidebarItem key={item.name} item={item} />)}
+        {menu.map((item) => (
+          <SidebarItem key={item.id} item={item} active={currentPage === item.id} />
+        ))}
 
         {/* System */}
         <div className="mt-auto">
@@ -145,7 +159,9 @@ export default function Sidebar() {
             System
           </p>
 
-          {settings.map((item) => <SidebarItem key={item.name} item={item} />)}
+          {settings.map((item) => (
+            <SidebarItem key={item.id} item={item} active={currentPage === item.id} />
+          ))}
 
         </div>
       </nav>

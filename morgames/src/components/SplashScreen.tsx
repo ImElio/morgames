@@ -96,6 +96,21 @@ export default function SplashScreen() {
 
       </div>
 
+      {/* ToS & Privacy Policy */}
+      <div
+        className={`
+          absolute bottom-8 w-full px-4 text-center
+          text-xs text-foreground/40
+          transition-opacity duration-500
+          ${expand ? "opacity-0" : "opacity-100"}
+        `}
+      >
+        <p>
+          By continuing, you agree to our{" "}
+          <a href="/tos" className="underline hover:text-foreground/60">Terms of Service</a> and{" "}
+          <a href="/privacy" className="underline hover:text-foreground/60">Privacy Policy</a>.
+        </p>
+      </div>
     </div>
   );
 }
